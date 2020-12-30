@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30803.129
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valsom.Logging.PrettyConsole", "Valsom.Logging.PrettyConsole\Valsom.Logging.PrettyConsole.csproj", "{4EEBBD97-1A66-404D-9268-1CDEABDA5AC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valsom.Logging.PrettyConsole.Test", "Valsom.Logging.PrettyConsole.Test\Valsom.Logging.PrettyConsole.Test.csproj", "{C39E1ADD-EA33-459E-B430-9DE80A6C6E50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EEBBD97-1A66-404D-9268-1CDEABDA5AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EEBBD97-1A66-404D-9268-1CDEABDA5AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EEBBD97-1A66-404D-9268-1CDEABDA5AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EEBBD97-1A66-404D-9268-1CDEABDA5AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C39E1ADD-EA33-459E-B430-9DE80A6C6E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C39E1ADD-EA33-459E-B430-9DE80A6C6E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C39E1ADD-EA33-459E-B430-9DE80A6C6E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C39E1ADD-EA33-459E-B430-9DE80A6C6E50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {935E8CDC-5D71-4B8D-AF23-D73B3223B551}
+	EndGlobalSection
+EndGlobal
