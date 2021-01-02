@@ -9,8 +9,8 @@
     <PackageProjectUrl>https://github.com/Valsom/Logging.PrettyConsole</PackageProjectUrl>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <FileVersion>0.1.0.0</FileVersion>
-    <InformationalVersion>0.1.0-alpha.10+Branch.dev.Sha.34f796ddf27a0c4712f4da23d43423250d30b412</InformationalVersion>
-    <Version>0.1.0-alpha0010</Version>
+    <InformationalVersion>0.1.0-alpha.12+Branch.dev.Sha.903c9b4a5ec6746d2fd3dc93f55c16bce20e60e2</InformationalVersion>
+    <Version>0.1.0-alpha0012</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
