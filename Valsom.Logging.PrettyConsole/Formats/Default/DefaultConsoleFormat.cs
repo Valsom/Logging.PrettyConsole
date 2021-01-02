@@ -80,13 +80,21 @@ namespace Valsom.Logging.PrettyConsole.Formats.Default
             IAnsiStringBuilder exception = new AnsiStringBuilder();
 
             string stack = ex.StackTrace;
+            bool isFirstException = true;
 
             while (ex != null)
             {
                 string exceptionName = GetPrettyExceptionName(ex);
 
+                if (isFirstException)
+                {
+                    exception.AddPart($" {exceptionName} ").With(Theme.Background).WithBackground(accentColor);
+                }
+                else
+                {
+                    exception.AddPart($" {exceptionName} ").With(accentColor);
+                }
 
-                exception.AddPart($" {exceptionName} ").With(Theme.Background).WithBackground(accentColor);
                 exception.AddPart(" : ").With(Theme.Punctuation).WithBackground(Theme.Background);
                 exception.AddPart(ex.Message.Trim()).With(accentColor);
                 exception.AddPart(Environment.NewLine);
@@ -115,6 +123,7 @@ namespace Valsom.Logging.PrettyConsole.Formats.Default
                 }
 
                 ex = ex.InnerException;
+                isFirstException = false;
             }
 
             if (!string.IsNullOrWhiteSpace(stack))
