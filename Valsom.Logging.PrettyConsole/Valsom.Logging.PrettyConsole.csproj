@@ -7,10 +7,10 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Console Logging ILogger</PackageTags>
     <PackageProjectUrl>https://github.com/Valsom/Logging.PrettyConsole</PackageProjectUrl>
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
-    <FileVersion>0.1.0.0</FileVersion>
-    <InformationalVersion>0.1.0-alpha.12+Branch.dev.Sha.903c9b4a5ec6746d2fd3dc93f55c16bce20e60e2</InformationalVersion>
-    <Version>0.1.0-alpha0012</Version>
+    <AssemblyVersion>0.1.1.0</AssemblyVersion>
+    <FileVersion>0.1.1.0</FileVersion>
+    <InformationalVersion>0.1.1-alpha.15+Branch.dev.Sha.63194fcbf7e34517153143f858f1d187624e5c5a</InformationalVersion>
+    <Version>0.1.1-alpha0015</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
