@@ -1,4 +1,4 @@
-name: Draft new release
+name: Draft release
 on:
   milestone:
     types: [closed]
@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Create release notes
+      - name: Generate release notes
         uses: docker://decathlon/release-notes-generator-action:2.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -25,12 +25,8 @@ jobs:
       - name: Setup GitVersion
         run: dotnet tool install --global GitVersion.Tool --version 5.6.0
 
-      - name: Fetch for GitVersion
+      - name: Fetch git tags
         run: git fetch --tags --unshallow
-
-      - name: Fetch main for GitVersion
-        if: github.ref != 'refs/heads/main'
-        run: git branch --create-reflog main origin/main
 
       - name: Get version
         run: dotnet-gitversion /output buildserver
@@ -48,7 +44,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ env.GitVersion_LegacySemVerPadded }}
-          release_name: ${{ github.event.repository.name }} v${{ env.GitVersion_LegacySemVer }}
-          body: ${{steps.NOTES.outputs.content}}
+          release_name: v${{ env.GitVersion_LegacySemVer }}
+          body: |
+            # ${{ github.event.repository.name }} v${{ env.GitVersion_LegacySemVer }} has been released
+            ```
+            dotnet add package  ${{ github.event.repository.name }} --version ${{ env.GitVersion_NuGetVersionV2 }}
+            ```
+            ${{steps.NOTES.outputs.content}}
           draft: true
           prerelease: ${{ env.GitVersion_PreReleaseLabel != '' }}
